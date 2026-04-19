@@ -17,10 +17,6 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* NAV */
 .nav {
     display: flex;
@@ -38,9 +34,17 @@ html {
     height: 45px;
 }
 
-/* HERO (CLEAN & BALANCED) */
+.cart-btn {
+    border: 1px solid gold;
+    padding: 8px 15px;
+    color: gold;
+    cursor: pointer;
+}
+
+/* SQUARE HERO (FIXED) */
 .hero {
-    height: 60vh;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
 }
@@ -63,7 +67,7 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,30 +77,28 @@ html {
 
 .overlay h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 42px;
+    font-size: 40px;
     letter-spacing: 4px;
 }
 
-/* SECTION SYSTEM */
+/* SECTION */
 .section {
     padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
     text-align: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .section h2 {
     font-family: 'Playfair Display', serif;
     font-size: 30px;
-    margin-bottom: 10px;
 }
 
 .section p {
     color: #aaa;
-    margin-bottom: 40px;
 }
 
-/* SCENT GRID (IMPORTANT FIX) */
+/* GRID */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -134,11 +136,10 @@ html {
 /* BUTTON */
 button {
     width: 100%;
-    margin-top: 10px;
-    background: transparent;
-    border: 1px solid gold;
-    color: gold;
     padding: 10px;
+    border: 1px solid gold;
+    background: transparent;
+    color: gold;
     cursor: pointer;
 }
 
@@ -150,7 +151,7 @@ button:hover {
 /* CART */
 .cart {
     position: fixed;
-    right: -340px;
+    right: -350px;
     top: 0;
     width: 320px;
     height: 100%;
@@ -162,13 +163,6 @@ button:hover {
 
 .cart.open {
     right: 0;
-}
-
-.cart-btn {
-    border: 1px solid gold;
-    padding: 8px 14px;
-    color: gold;
-    cursor: pointer;
 }
 
 /* FOOTER */
@@ -187,12 +181,10 @@ button:hover {
 <!-- NAV -->
 <div class="nav">
     <img src="logo.png">
-    <div class="cart-btn" onclick="toggleCart()">
-        Cart 🛒 (<span id="count">0</span>)
-    </div>
+    <div class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</div>
 </div>
 
-<!-- HERO (CLEAN + SMALL + PREMIUM) -->
+<!-- HERO -->
 <div class="hero">
 
     <div class="slide active" style="background-image:url('hero.jpg')">
@@ -203,34 +195,72 @@ button:hover {
         </div>
     </div>
 
-    <div class="slide" style="background-image:url('lifestyle.jpg')">
-        <div class="overlay">
-            <h1>Signature Scents</h1>
-            <p>Elegant. Affordable. Timeless.</p>
-        </div>
-    </div>
-
-    <div class="slide" style="background-image:url('promo.jpg')">
-        <div class="overlay">
-            <h1>₱299 | 50mL</h1>
-            <p>Available now</p>
-        </div>
-    </div>
+    <div class="slide" style="background-image:url('lifestyle.jpg')"></div>
+    <div class="slide" style="background-image:url('promo.jpg')"></div>
 
 </div>
 
-<!-- SCENTS (NOW PROPERLY VISIBLE) -->
-<div class="section" id="shop">
+<!-- SCENTS -->
+<div class="section">
     <h2>Available Scents</h2>
-    <p>Explore our signature inspired fragrance collection</p>
+    <p>₱299 | 50mL | Inspired Luxury Collection</p>
 
     <div class="products">
 
         <div class="card">
             <img src="bottle.jpg">
-            <h3>Anmiera Signature</h3>
+            <h3>Happy Bloom</h3>
+            <p>Inspired by Clinique Happy</p>
             <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Anmiera Signature')">Buy Now</button>
+            <button onclick="buyNow('Happy Bloom')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Libre Muse</h3>
+            <p>YSL Libre Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Libre Muse')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Valaya Essence</h3>
+            <p>Parfums de Marly Valaya Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Valaya Essence')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Cloud Touch</h3>
+            <p>Ariana Grande Cloud Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Cloud Touch')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Rouge Aura</h3>
+            <p>Baccarat Rouge 540 Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Rouge Aura')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Coco Elegance</h3>
+            <p>Chanel Coco Mademoiselle Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Coco Elegance')">Buy Now</button>
+        </div>
+
+        <div class="card">
+            <img src="bottle.jpg">
+            <h3>Good Girl Noir</h3>
+            <p>Carolina Herrera Good Girl Inspired</p>
+            <div class="price">₱299 | 50mL</div>
+            <button onclick="buyNow('Good Girl Noir')">Buy Now</button>
         </div>
 
     </div>
@@ -243,7 +273,7 @@ button:hover {
 
     <a href="#" onclick="checkoutCart()" style="
         display:block;
-        margin-top:15px;
+        margin-top:10px;
         padding:10px;
         border:1px solid gold;
         color:gold;
@@ -266,7 +296,7 @@ button:hover {
 
 <!-- FOOTER -->
 <div class="footer">
-    © 2026 Anmiera Perfume
+    © 2026 Anmiera Perfume. All rights reserved.
 </div>
 
 <script>
@@ -276,37 +306,29 @@ let cart = [];
 function buyNow(product) {
     let phone = "639952525228";
 
-    let message = `Hi! I want to order:
+    let msg = `Hi! I want to order:
 
-🧴 Product: ${product}
-💰 Price: ₱299
-📦 Size: 50mL`;
+🧴 ${product}
+💰 ₱299
+📦 50mL`;
 
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank");
+    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
 }
 
 function toggleCart() {
     document.getElementById("cart").classList.toggle("open");
 }
 
-function addToCart(item) {
-    cart.push(item);
-    document.getElementById("count").innerText = cart.length;
-
-    document.getElementById("cartItems").innerHTML =
-        cart.map(i => "• " + i).join("<br>");
-}
-
 function checkoutCart() {
     let phone = "639952525228";
 
-    let message = "Hi! I want to order:\n\n";
+    let msg = "Hi! I want to order:\n\n";
 
-    cart.forEach((item, i) => {
-        message += (i+1) + ". " + item + " (₱299)\n";
+    cart.forEach((c, i) => {
+        msg += (i+1) + ". " + c + " (₱299)\n";
     });
 
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank");
+    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
 }
 
 /* SLIDER */
