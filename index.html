@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anmiera</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300&display=swap" rel="stylesheet">
 
 <style>
@@ -17,7 +16,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -35,7 +34,6 @@ body {
     color: #aaa;
     text-decoration: none;
     margin-left: 20px;
-    font-size: 14px;
 }
 
 /* HERO */
@@ -60,7 +58,7 @@ body {
 }
 
 .btn {
-    margin-top: 25px;
+    margin-top: 20px;
     padding: 12px 30px;
     border: 1px solid gold;
     color: gold;
@@ -81,47 +79,67 @@ body {
 
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    margin-bottom: 20px;
 }
 
 /* PRODUCTS */
 .products {
     display: flex;
-    gap: 30px;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
 }
 
 .card {
-    width: 250px;
+    width: 220px;
     border: 1px solid #222;
-    padding: 20px;
+    padding: 15px;
     transition: 0.3s;
 }
 
 .card:hover {
     border-color: gold;
+    transform: translateY(-5px);
 }
 
 .card img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: cover;
 }
 
 .card h3 {
     font-family: 'Playfair Display', serif;
+    font-size: 16px;
 }
 
-.card p {
-    color: #aaa;
-    font-size: 14px;
+.price {
+    color: gold;
+    margin-top: 5px;
+}
+
+.size {
+    font-size: 12px;
+    color: #777;
+}
+
+/* SOCIAL */
+.social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    border: 1px solid gold;
+    color: gold;
+    text-decoration: none;
+}
+
+.social a:hover {
+    background: gold;
+    color: black;
 }
 
 /* FOOTER */
 .footer {
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     border-top: 1px solid #222;
     color: #777;
@@ -132,62 +150,71 @@ body {
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
     <div class="logo">ANMIERA</div>
     <div>
         <a href="#">Home</a>
         <a href="#shop">Shop</a>
-        <a href="#about">About</a>
+        <a href="#contact">Order</a>
     </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
     <h1>ANMIERA</h1>
-    <p>A scent that lingers. A presence that speaks.  
-    Crafted for those who embody elegance.</p>
-    <a href="#shop" class="btn">Explore Collection</a>
+    <p>Luxury-inspired fragrances. Affordable elegance for everyday confidence.</p>
+    <a href="#shop" class="btn">Shop Now</a>
 </div>
 
-<!-- PRODUCTS -->
 <div class="section" id="shop">
-    <h2>Signature Collection</h2>
+    <h2>Inspired Collection</h2>
 
     <div class="products">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f" alt="">
-            <h3>Noir Essence</h3>
-            <p>Deep, warm, and mysterious. A bold signature scent.</p>
-        </div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f"><h3>Happy Bloom</h3><p>Inspired by Clinique Happy</p><div class="price">₱299</div><div class="size">50mL</div></div>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de" alt="">
-            <h3>Velour Bloom</h3>
-            <p>Soft floral elegance with a modern sensual touch.</p>
-        </div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de"><h3>Libre Muse</h3><p>Inspired by YSL Libre</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1585386959984-a41552231658"><h3>Velaya Silk</h3><p>Inspired by Valaya</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba8"><h3>Cloud Touch</h3><p>Inspired by Ariana Grande Cloud</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1618354691229-88d47f285158"><h3>Meow Bliss</h3><p>Inspired by Katy Perry Meow</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1600181958050-5e5c2f0b9c60"><h3>Rouge Aura</h3><p>Inspired by Baccarat Rouge 540</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de"><h3>Mademoiselle Noir</h3><p>Inspired by Coco Mademoiselle</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"><h3>Midnight Heel</h3><p>Inspired by Good Girl</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f"><h3>Black Sport</h3><p>Inspired by Lacoste Black</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de"><h3>White Pure</h3><p>Inspired by Lacoste White</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1585386959984-a41552231658"><h3>Purple Desire</h3><p>Inspired by Dylan Purple</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba8"><h3>Pear Freesia</h3><p>Inspired by Jo Malone</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1618354691229-88d47f285158"><h3>Sport Fresh</h3><p>Inspired by Polo Sport</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1600181958050-5e5c2f0b9c60"><h3>Eros Flame</h3><p>Inspired by Versace Eros</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de"><h3>Amethyst Glow</h3><p>Inspired by Omnia Amethyste</p><div class="price">₱299</div><div class="size">50mL</div></div>
+
+        <div class="card"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539"><h3>Red Rush</h3><p>Inspired by Lacoste Red</p><div class="price">₱299</div><div class="size">50mL</div></div>
 
     </div>
 </div>
 
-<!-- ABOUT -->
-<div class="section" id="about">
-    <h2>About Anmiera</h2>
-    <p style="max-width:600px; margin:auto; color:#aaa;">
-        Anmiera is more than fragrance—it is identity, memory, and emotion captured in a bottle.  
-        Designed for individuals who leave a lasting impression wherever they go.
-    </p>
-</div>
-
-<!-- CTA -->
-<div class="section">
+<div class="section" id="contact">
     <h2>Order Now</h2>
-    <p style="color:#aaa;">Message us directly to purchase</p>
-    <a href="#" class="btn">Contact Us</a>
+    <p style="color:#aaa;">Message us on social media</p>
+
+    <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+    </div>
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
     © 2026 Anmiera. All rights reserved.
 </div>
