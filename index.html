@@ -9,6 +9,7 @@
 
 <style>
 
+/* GLOBAL */
 body {
     margin: 0;
     background: #0a0a0a;
@@ -40,7 +41,7 @@ body {
     cursor: pointer;
 }
 
-/* HERO SLIDER (FIXED) */
+/* HERO SLIDER (WORKING) */
 .hero {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -169,7 +170,7 @@ button:hover {
 <!-- NAV -->
 <div class="nav">
     <img src="logo.png">
-    <div class="cart-btn" onclick="toggleCart()">Cart 🛒 (<span id="count">0</span>)</div>
+    <div class="cart-btn" onclick="toggleCart()">Cart 🛒</div>
 </div>
 
 <!-- HERO -->
@@ -195,101 +196,39 @@ button:hover {
 
     <div class="products">
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Happy Bloom</h3>
-            <p>Clinique Happy Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Happy Bloom')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Happy Bloom</h3><p>Clinique Happy Inspired</p><div class="price">₱299</div><button onclick="buyNow('Happy Bloom')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Libre Muse</h3>
-            <p>YSL Libre Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Libre Muse')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Libre Muse</h3><p>YSL Libre Inspired</p><div class="price">₱299</div><button onclick="buyNow('Libre Muse')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Cloud Touch</h3>
-            <p>Ariana Grande Cloud Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Cloud Touch')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Valaya Essence</h3><p>Valaya Inspired</p><div class="price">₱299</div><button onclick="buyNow('Valaya Essence')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Meow Bliss</h3>
-            <p>Katy Perry Meow Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Meow Bliss')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Cloud Touch</h3><p>Ariana Grande Cloud</p><div class="price">₱299</div><button onclick="buyNow('Cloud Touch')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Rouge Aura</h3>
-            <p>Baccarat Rouge 540 Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Rouge Aura')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Meow Bliss</h3><p>Katy Perry Meow</p><div class="price">₱299</div><button onclick="buyNow('Meow Bliss')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Lacoste Black</h3>
-            <p>Masculine Fresh</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Lacoste Black')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Rouge Aura</h3><p>Baccarat Rouge 540</p><div class="price">₱299</div><button onclick="buyNow('Rouge Aura')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Lacoste White</h3>
-            <p>Clean Fresh Scent</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Lacoste White')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Coco Elegance</h3><p>Chanel Inspired</p><div class="price">₱299</div><button onclick="buyNow('Coco Elegance')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Lacoste Red</h3>
-            <p>Energetic Scent</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Lacoste Red')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Good Girl Noir</h3><p>Carolina Herrera</p><div class="price">₱299</div><button onclick="buyNow('Good Girl Noir')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Dylan Purple</h3>
-            <p>Versace Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Dylan Purple')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Lacoste Black</h3><p>Masculine Fresh</p><div class="price">₱299</div><button onclick="buyNow('Lacoste Black')">Buy Now</button></div>
 
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Eros Flame</h3>
-            <p>Versace Eros Inspired</p>
-            <div class="price">₱299</div>
-            <button onclick="buyNow('Eros Flame')">Buy Now</button>
-        </div>
+        <div class="card"><img src="bottle.jpg"><h3>Lacoste White</h3><p>Clean Fresh</p><div class="price">₱299</div><button onclick="buyNow('Lacoste White')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Lacoste Red</h3><p>Energetic Scent</p><div class="price">₱299</div><button onclick="buyNow('Lacoste Red')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Dylan Purple</h3><p>Versace Inspired</p><div class="price">₱299</div><button onclick="buyNow('Dylan Purple')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Pear Essence</h3><p>Jo Malone Inspired</p><div class="price">₱299</div><button onclick="buyNow('Pear Essence')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Polo Sport Fresh</h3><p>Ralph Lauren Inspired</p><div class="price">₱299</div><button onclick="buyNow('Polo Sport Fresh')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Eros Flame</h3><p>Versace Eros</p><div class="price">₱299</div><button onclick="buyNow('Eros Flame')">Buy Now</button></div>
+
+        <div class="card"><img src="bottle.jpg"><h3>Amethyste Glow</h3><p>Bvlgari Inspired</p><div class="price">₱299</div><button onclick="buyNow('Amethyste Glow')">Buy Now</button></div>
 
     </div>
-</div>
-
-<!-- CART -->
-<div class="cart" id="cart">
-    <h3>Your Cart</h3>
-    <div id="cartItems"></div>
-
-    <a href="#" onclick="checkoutCart()" style="color:gold; display:block; margin-top:10px;">
-        Checkout via WhatsApp
-    </a>
-
-    <a href="https://www.facebook.com/anmieraperfume/" target="_blank" style="color:gold; display:block; margin-top:10px;">
-        Order via Facebook
-    </a>
 </div>
 
 <!-- FOOTER -->
@@ -299,24 +238,6 @@ button:hover {
 
 <script>
 
-let cart = [];
-
-function buyNow(product) {
-    let phone = "639952525228";
-
-    let msg = `Hi! I want to order:
-🧴 ${product}
-💰 ₱299
-📦 50mL`;
-
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
-}
-
-function toggleCart() {
-    document.getElementById("cart").classList.toggle("open");
-}
-
-/* SLIDER FIXED */
 let slides = document.querySelectorAll(".slide");
 let i = 0;
 
@@ -325,6 +246,16 @@ setInterval(() => {
     slides[i].classList.add("active");
     i = (i + 1) % slides.length;
 }, 4000);
+
+function buyNow(product){
+    let phone = "639952525228";
+    let msg = `Hi! I want to order:\n🧴 ${product}\n💰 ₱299\n📦 50mL`;
+    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg));
+}
+
+function toggleCart(){
+    document.querySelector(".cart").classList.toggle("open");
+}
 
 </script>
 
