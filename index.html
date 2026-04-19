@@ -9,7 +9,6 @@
 
 <style>
 
-/* GLOBAL */
 body {
     margin: 0;
     background: #0a0a0a;
@@ -22,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
+    padding: 15px 30px;
     border-bottom: 1px solid #222;
     position: sticky;
     top: 0;
@@ -36,12 +35,12 @@ body {
 
 .cart-btn {
     border: 1px solid gold;
-    padding: 8px 15px;
+    padding: 8px 12px;
     color: gold;
     cursor: pointer;
 }
 
-/* SQUARE HERO */
+/* HERO SLIDER (FIXED) */
 .hero {
     width: 100%;
     aspect-ratio: 1 / 1;
@@ -78,24 +77,16 @@ body {
 .overlay h1 {
     font-family: 'Playfair Display', serif;
     font-size: 40px;
-    letter-spacing: 4px;
 }
 
 /* SECTION */
 .section {
-    padding: 60px 20px;
+    padding: 50px 20px;
     text-align: center;
-    max-width: 1200px;
-    margin: auto;
 }
 
 .section h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
-}
-
-.section p {
-    color: #aaa;
 }
 
 /* GRID */
@@ -103,6 +94,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* CARD */
@@ -120,12 +113,8 @@ body {
 
 .card img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
-}
-
-.card h3 {
-    font-family: 'Playfair Display', serif;
 }
 
 .price {
@@ -151,14 +140,13 @@ button:hover {
 /* CART */
 .cart {
     position: fixed;
-    right: -350px;
+    right: -320px;
     top: 0;
-    width: 320px;
+    width: 300px;
     height: 100%;
     background: #111;
     padding: 20px;
     transition: 0.3s;
-    border-left: 1px solid #333;
 }
 
 .cart.open {
@@ -169,8 +157,8 @@ button:hover {
 .footer {
     padding: 30px;
     text-align: center;
-    border-top: 1px solid #222;
     color: #777;
+    border-top: 1px solid #222;
 }
 
 </style>
@@ -191,16 +179,19 @@ button:hover {
         <div class="overlay">
             <img src="logo.png" style="height:70px;">
             <h1>ANMIERA</h1>
-            <p>Luxury-inspired fragrance collection</p>
+            <p>Luxury Inspired Fragrance</p>
         </div>
     </div>
+
+    <div class="slide" style="background-image:url('lifestyle.jpg')"></div>
+    <div class="slide" style="background-image:url('promo.jpg')"></div>
 
 </div>
 
 <!-- SCENTS -->
 <div class="section">
     <h2>Available Scents</h2>
-    <p>₱299 | 50mL | Inspired Luxury Perfume Collection</p>
+    <p>₱299 | 50mL | Inspired Luxury Collection</p>
 
     <div class="products">
 
@@ -208,7 +199,7 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Happy Bloom</h3>
             <p>Clinique Happy Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Happy Bloom')">Buy Now</button>
         </div>
 
@@ -216,23 +207,15 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Libre Muse</h3>
             <p>YSL Libre Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Libre Muse')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Valaya Essence</h3>
-            <p>Parfums de Marly Valaya Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Valaya Essence')">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="bottle.jpg">
             <h3>Cloud Touch</h3>
             <p>Ariana Grande Cloud Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Cloud Touch')">Buy Now</button>
         </div>
 
@@ -240,7 +223,7 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Meow Bliss</h3>
             <p>Katy Perry Meow Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Meow Bliss')">Buy Now</button>
         </div>
 
@@ -248,39 +231,23 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Rouge Aura</h3>
             <p>Baccarat Rouge 540 Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Rouge Aura')">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="bottle.jpg">
-            <h3>Coco Elegance</h3>
-            <p>Chanel Coco Mademoiselle Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Coco Elegance')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Good Girl Noir</h3>
-            <p>Carolina Herrera Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Good Girl Noir')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
             <h3>Lacoste Black</h3>
-            <p>Sporty Masculine</p>
-            <div class="price">₱299 | 50mL</div>
+            <p>Masculine Fresh</p>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Lacoste Black')">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="bottle.jpg">
             <h3>Lacoste White</h3>
-            <p>Fresh Clean Scent</p>
-            <div class="price">₱299 | 50mL</div>
+            <p>Clean Fresh Scent</p>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Lacoste White')">Buy Now</button>
         </div>
 
@@ -288,7 +255,7 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Lacoste Red</h3>
             <p>Energetic Scent</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Lacoste Red')">Buy Now</button>
         </div>
 
@@ -296,40 +263,16 @@ button:hover {
             <img src="bottle.jpg">
             <h3>Dylan Purple</h3>
             <p>Versace Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Dylan Purple')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Pear Essence</h3>
-            <p>Jo Malone Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Pear Essence')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Polo Sport Fresh</h3>
-            <p>Ralph Lauren Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Polo Sport Fresh')">Buy Now</button>
         </div>
 
         <div class="card">
             <img src="bottle.jpg">
             <h3>Eros Flame</h3>
             <p>Versace Eros Inspired</p>
-            <div class="price">₱299 | 50mL</div>
+            <div class="price">₱299</div>
             <button onclick="buyNow('Eros Flame')">Buy Now</button>
-        </div>
-
-        <div class="card">
-            <img src="bottle.jpg">
-            <h3>Amethyste Glow</h3>
-            <p>Bvlgari Inspired</p>
-            <div class="price">₱299 | 50mL</div>
-            <button onclick="buyNow('Amethyste Glow')">Buy Now</button>
         </div>
 
     </div>
@@ -340,25 +283,11 @@ button:hover {
     <h3>Your Cart</h3>
     <div id="cartItems"></div>
 
-    <a href="#" onclick="checkoutCart()" style="
-        display:block;
-        margin-top:10px;
-        padding:10px;
-        border:1px solid gold;
-        color:gold;
-        text-align:center;
-        text-decoration:none;">
+    <a href="#" onclick="checkoutCart()" style="color:gold; display:block; margin-top:10px;">
         Checkout via WhatsApp
     </a>
 
-    <a href="https://www.facebook.com/anmieraperfume/" target="_blank" style="
-        display:block;
-        margin-top:10px;
-        padding:10px;
-        border:1px solid gold;
-        color:gold;
-        text-align:center;
-        text-decoration:none;">
+    <a href="https://www.facebook.com/anmieraperfume/" target="_blank" style="color:gold; display:block; margin-top:10px;">
         Order via Facebook
     </a>
 </div>
@@ -376,7 +305,6 @@ function buyNow(product) {
     let phone = "639952525228";
 
     let msg = `Hi! I want to order:
-
 🧴 ${product}
 💰 ₱299
 📦 50mL`;
@@ -388,19 +316,7 @@ function toggleCart() {
     document.getElementById("cart").classList.toggle("open");
 }
 
-function checkoutCart() {
-    let phone = "639952525228";
-
-    let msg = "Hi! I want to order:\n\n";
-
-    cart.forEach((c, i) => {
-        msg += (i+1) + ". " + c + " (₱299)\n";
-    });
-
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank");
-}
-
-/* SIMPLE SLIDER */
+/* SLIDER FIXED */
 let slides = document.querySelectorAll(".slide");
 let i = 0;
 
